@@ -25,14 +25,14 @@ colorizedSubcommands = (
 )
 
 statusColors = {
-    'M'     : "31",     # red 
-    '?'    : "37",     # grey
+    'M'     : "33",     # yellow
+    '?'     : "37",     # white
     'A'     : "32",     # green
-    'X'     : "33",     # yellow
+    'X'     : "30;1",   # grey
     'C'     : "30;41",  # black on red
     '-'     : "31",     # red
-    'D'     : "31;1",   # bold red
-    '+'    : "32",     # green
+    'D'     : "31",     # red 
+    '+'     : "32",     # green
 }
 
 def colorize(line):
