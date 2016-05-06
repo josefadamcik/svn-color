@@ -33,6 +33,7 @@ statusColors = {
     '-'     : "31",     # red
     'D'     : "31",     # red 
     '+'     : "32",     # green
+    '@'     : "34",     # blue
 }
 
 def colorize(line):
