@@ -50,7 +50,7 @@ if __name__ == '__main__':
         subcommand = (command[1], '')[len(command) < 2]
     else:
         subcommand = ''
-    if subcommand in colorizedSubcommands and sys.stdout.isatty():
+    if subcommand in colorizedSubcommands: # and sys.stdout.isatty():
         task = subprocess.Popen(command, stdout=subprocess.PIPE)
         while True:
             line = task.stdout.readline()
