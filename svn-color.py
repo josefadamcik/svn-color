@@ -5,7 +5,7 @@
  Contact: phalkunz@gmail.com
  Date: May 23, 2009
  Modified: June 15, 2009
- 
+
  Additional modifications:
  Author: Phil Christensen (http://bubblehouse.org)
  Contact: phil@bubblehouse.org
@@ -22,20 +22,33 @@ colorizedSubcommands = (
 	'remove',
 	'diff',
 	'di',
+    'log',
 )
 
 statusColors = {
-    'M'     : "33",     # yellow
-    '?'     : "37",     # white
+    'M'     : "31",     # red
+    '?'    : "37",     # grey
     'A'     : "32",     # green
-    'X'     : "30;1",   # grey
-    'C'     : "30;41",  # black on red
+    'X'     : "33",     # yellow
+    'C '     : "30;41",  # black on red
     '-'     : "31",     # red
-    'D'     : "31",     # red 
-    '+'     : "32",     # green
+    'D'     : "31;1",   # bold red
+    '+'    : "32",     # green
+    # 'M'     : "33",     # yellow
+    # '?'     : "37",     # white
+    # 'A'     : "32",     # green
+    # 'X'     : "30;1",   # grey
+    # 'C '     : "30;41",  # black on red
+    # '-'     : "31",     # red
+    # 'D'     : "31",     # red
+    # '+'     : "32",     # green
     '@'     : "36",     # cyan
     'Index:': "33;1",   # yellow with bold
     '='     : "34",     # yellow
+    '-'     : "34",     # yellow
+    'r'     : "33;1",
+    '   M'  : "32",
+    '   A'  : "33"
 }
 
 def colorize(line):
@@ -48,7 +61,7 @@ def colorize(line):
 if __name__ == '__main__':
     command = sys.argv
     command[0] = '/usr/bin/svn'
-    
+
     if len(command) > 1:
         subcommand = (command[1], '')[len(command) < 2]
     else:
