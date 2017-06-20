@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
  Author: Saophalkun Ponlu (http://phalkunz.com)
@@ -72,7 +72,7 @@ if __name__ == '__main__':
             line = task.stdout.readline()
             if not line:
                 break
-            sys.stdout.write(colorize(line))
+            sys.stdout.write(colorize(line.decode()))
             sys.stdout.flush()
     else:
         task = subprocess.Popen(command)
